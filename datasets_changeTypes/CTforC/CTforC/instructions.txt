@@ -1,0 +1,51 @@
+
+Installation Instructions:
+
+  1) python and perl
+
+
+  2) Coccinelle
+ 	first from http://coccinelle.lip6.fr/download.php download Coccinelle ( http://coccinelle.lip6.fr/distrib/coccinelle-1.0.6.tgz)
+  
+	then install coccinelle following the instructions in the "intall.txt" file.
+
+	run ./configure --enable-release
+
+	To compile coccinelle, run:
+ 		 $ make all
+
+	To install coccinelle, run:
+ 		 $ make install
+
+	Then, to test coccinelle, run for example:
+  		$ spatch -sp_file demos/simple.cocci demos/simple.c -o /tmp/new_simple.c
+
+	After the installation, you may need to set some environment variables so that the python libraries are found. 
+	The frontend 'spatch' sets the following variables:
+		$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+  		$ export PYTHONPATH=$PYTHONPATH:/usr/local/share/coccinelle/python
+
+
+  3) Understand
+	download Understand from https://scitools.com
+	then install Understand following the instructions in https://scitools.com/documents/unix_install.php
+
+	Add to PATH:
+	  % export PATH=$PATH:/home/myname/scitools/bin/linux64
+
+
+**********************************************************************************
+**********************************************************************************
+
+2.how to run CTforC
+ 	1)if the studied project only has fixing patches  
+		put the source code in the "source" folder, and the patches in the "patches" folder.
+		then revise the first command in ok_auto.sh to "uperl auto_getdiff.pl 1"
+		last, run "bash ok_auto.sh"
+
+	2) if the project has the corresponding fix version
+		put the source code of bug version in the "bugversion" folder and the source code of the fix version in the "fixversion" folder respectviely. 
+		then revise the first command in ok_auto.sh to "uperl auto_getdiff.pl 0"
+		last, run "bash ok_auto.sh"
+
+	the final results will be in the "result/ok_alltype.txt"

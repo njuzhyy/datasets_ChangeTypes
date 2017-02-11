@@ -1,0 +1,32 @@
+test/testproc.c,test_file_redir,2,4
+test/testproc.c,test_create_proc,2,4
+test/testflock.c,launch_reader,2,4
+network_io/unix/sockets.c,apr_socket_create,1,2,4,6,7,8
+test/nw_misc.c,_NonAppStop,1,4,6
+test/testpoll.c,multi_event_pollset,1,2,4
+file_io/unix/open.c,file_cleanup,1,2,3,4,6
+test/testpoll.c,send_last_pollset,2,4
+file_io/unix/open.c,apr_unix_child_file_cleanup,4,7
+test/testpoll.c,send_middle_pollset,2,4,6
+shmem/unix/shm.c,shm_cleanup_owner,4,6,7,8
+test/testsock.c,launch_child,2,4
+file_io/unix/open.c,apr_unix_file_cleanup,2,4
+test/testpoll.c,trigger_pollcb,2,4
+test/sockperf.c,main,4
+test/abts.c,abts_ptr_notnull,4
+network_io/unix/sockets.c,socket_cleanup,1,2,4,6
+network_io/unix/sockets.c,apr_socket_accept,1,2,4,6,7,8
+memory/unix/apr_pools.c,allocator_alloc,1,2,3,4,6,7
+test/testpipe.c,test_pipe_writefull,2,4
+test/testpoll.c,send0_pollset,2,4
+shmem/unix/shm.c,shm_cleanup_attach,7,8
+file_io/unix/filedup.c,file_dup,1,2,4,6,7,8
+test/testsock.c,testsock,4
+counttype1: 8
+counttype2: 17
+counttype3: 2
+counttype4: 23
+counttype5: 0
+counttype6: 9
+counttype7: 7
+counttype8: 5
